@@ -163,3 +163,62 @@ console.log( sum(a) );
  }
  console.log("Return all Palindrome in a Array using Arrow Function:");
  console.log(ps(arr));
+ //4.Print Odd Numbers in array using function:
+let A = [11,12,13,14,15,16,17,18,19,20];
+let result = [];
+function odd(A)
+{
+    for(var i=0;i<A.length;i++)
+    {
+        if(A[i]%2!==0)
+        {
+            result.push(A[i])
+        }
+    }
+    return result;
+}
+console.log("Printing Odd Numbers in array using function:")
+console.log(odd(A));
+//Print Odd Numbers in array using Anonymous function:
+let result1 = [];
+let odd1 = function odd(A)
+{
+    for(var i=0;i<A.length;i++)
+    {
+        if(A[i]%2!==0)
+        {
+            result1.push(A[i])
+        }
+    }
+    return result1;
+}
+console.log("Printing Odd Numbers in array using Anonymous function:")
+console.log(odd1(A));
+//Print Odd Numbers in array using IIFE function:
+(function odd2(A)
+ {  
+    let result2 =[]; 
+    for(var i=0;i<A.length;i++)
+    {
+        if(A[i]%2!==0)
+        {
+            result2.push(A[i])
+        }
+    }
+    console.log("Printing Odd Numbers in array using IIFE function:")
+    console.log(result2);
+})(A);
+//Print Odd Numbers in array using Arrow function
+const odd3 =(A) => {  
+    let result3 =[]; 
+    for(var i=0;i<A.length;i++)
+    {
+        if(A[i]%2!==0)
+        {
+            result3.push(A[i])
+        }
+    }
+    return result3;
+}
+console.log("Printing Odd Numbers in array using IIFE function:")
+console.log(odd3(A));
