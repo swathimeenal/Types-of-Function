@@ -220,5 +220,5 @@ const odd3 =(A) => {
     }
     return result3;
 }
-console.log("Printing Odd Numbers in array using IIFE function:")
+console.log("Printing Odd Numbers in array using Arrow function:")
 console.log(odd3(A));
