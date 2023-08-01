@@ -1,4 +1,4 @@
-//Sum of Array using Function
+//1.Sum of Array using Function
 let a = [1,2,3,4,5,6,7,8,9];
 let add = 0;
 function sum(a)
@@ -96,5 +96,70 @@ console.log( sum(a) );
   }
   console.log("Converting all Strings to Title Caps using Arrow Function:");
   console.log(convert(t));
-  
-  
+  //3. Return all Palindromes in an array using Function:
+ const arr = ['car','mom','dad','hello','racecar','why','did'];
+ let PalindromeString = [];
+ function palindrome(arr)
+ {
+     for (var i=0; i< arr.length; i++)
+     {   
+         let p = arr[i];
+         let s = arr[i].split("").reverse().join("");
+         if(s==p)
+         { 
+             PalindromeString.push(arr[i])
+         }
+     }
+     return PalindromeString;
+ }
+ console.log(palindrome(arr));
+  //Return all Palindrome in a Array using  Anonymous Function:
+ let PalindromeString1 = [];
+ let output = function (arr)
+ {
+     for (var i=0; i< arr.length; i++)
+     {   
+         let q = arr[i];
+         let r = arr[i].split("").reverse().join("");
+         if(q==r)
+         { 
+             PalindromeString1.push(arr[i]);
+          }
+      }
+      return PalindromeString;
+ 
+ }
+ console.log("Return all Palindrome in a Array using  Anonymous Function:")
+ console.log(output(arr));
+ //Return all Palindrome in a Array using  IIFE Function:
+ let PalindromeString2 = [];
+ (function palstring( )
+ {
+     for (var i=0; i< arr.length; i++)
+     {   
+         let u= arr[i];
+         let v = arr[i].split("").reverse().join("");
+         if(u==v)
+         { 
+             PalindromeString2.push(arr[i]);
+          }
+      }
+ console.log("Return all Palindrome in a Array using  IIFE Function:");
+ console.log(PalindromeString2);
+ })(arr);
+ //Return all Palindrome in a Array using Arrow Function:
+ let PalindromeString3 = [];
+ let ps = (arr) => {
+     for (var i=0; i< arr.length; i++)
+     {   
+         let g= arr[i];
+         let h = arr[i].split("").reverse().join("");
+         if(g==h)
+         { 
+             PalindromeString3.push(arr[i]);
+          }
+      }
+      return PalindromeString3;
+ }
+ console.log("Return all Palindrome in a Array using Arrow Function:");
+ console.log(ps(arr));
